@@ -15,9 +15,10 @@ module dma_controller (
 );
 
     // 3 states of fsm
-    localparam IDLE = 2'b00;
-    localparam READ = 2'b01;
+localparam IDLE  = 2'b00;
+    localparam READ  = 2'b01;
     localparam WRITE = 2'b10;
+    localparam DONE  = 2'b11; //*
 
     reg [1:0] state;
     reg [7:0] src_reg, dst_reg, length_reg;
@@ -59,11 +60,15 @@ module dma_controller (
                     length_reg <= length_reg - 1;
 
                     if (length_reg == 1) begin
-                        state <= IDLE; // we moved the last byte
-                        done <= 1;     // tell CPU we are finished
+                        state <= DONE; // * previously we moved the last byte and moved to IDLE now we move to DONE
                     end else begin
                         state <= READ; // keep looping onto next loop
                     end
+                end
+                DONE: begin
+                    mem_we <= 0; // turn off write signal to prevent overwrite
+                    done <= 1;   // tell the CPU we are properly! finished
+                    state <= IDLE;
                 end
             endcase
         end
