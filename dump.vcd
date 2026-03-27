@@ -1,0 +1,175 @@
+$date
+	Fri Mar 27 16:53:26 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 8 ! mem_data_in [7:0] $end
+$var wire 1 " mem_we $end
+$var wire 8 # mem_data_out [7:0] $end
+$var wire 8 $ mem_addr [7:0] $end
+$var wire 1 % done $end
+$var reg 1 & clk $end
+$var reg 8 ' dst [7:0] $end
+$var reg 8 ( len [7:0] $end
+$var reg 1 ) reset $end
+$var reg 8 * src [7:0] $end
+$var reg 1 + start $end
+$scope module dma $end
+$var wire 1 & clk $end
+$var wire 8 , dst_addr_in [7:0] $end
+$var wire 8 - length_in [7:0] $end
+$var wire 8 . mem_data_in [7:0] $end
+$var wire 1 ) reset $end
+$var wire 8 / src_addr_in [7:0] $end
+$var wire 1 + start $end
+$var parameter 2 0 IDLE $end
+$var parameter 2 1 READ $end
+$var parameter 2 2 WRITE $end
+$var reg 1 % done $end
+$var reg 8 3 dst_reg [7:0] $end
+$var reg 8 4 length_reg [7:0] $end
+$var reg 8 5 mem_addr [7:0] $end
+$var reg 8 6 mem_data_out [7:0] $end
+$var reg 1 " mem_we $end
+$var reg 8 7 src_reg [7:0] $end
+$var reg 2 8 state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 2
+b1 1
+b0 0
+$end
+#0
+$dumpvars
+b0 8
+bx 7
+bx 6
+bx 5
+bx 4
+bx 3
+bx /
+bx .
+bx -
+bx ,
+0+
+bx *
+1)
+bx (
+bx '
+0&
+0%
+bx $
+bx #
+0"
+bx !
+$end
+#5
+1&
+#10
+0&
+1+
+b11 (
+b11 -
+b110010 '
+b110010 ,
+b1010 *
+b1010 /
+0)
+#15
+b1 8
+b11 4
+b110010 3
+b1010 7
+1&
+#20
+0&
+0+
+#25
+b10101010 !
+b10101010 .
+b10 8
+b1010 $
+b1010 5
+1&
+#30
+0&
+#35
+bx !
+bx .
+b1 8
+b10 4
+b110011 3
+b1011 7
+b10101010 #
+b10101010 6
+b110010 $
+b110010 5
+1"
+1&
+#40
+0&
+#45
+b10 8
+b1011 $
+b1011 5
+0"
+b10111011 !
+b10111011 .
+1&
+#50
+0&
+#55
+bx !
+bx .
+b1 8
+b1 4
+b110100 3
+b1100 7
+b10111011 #
+b10111011 6
+b110011 $
+b110011 5
+1"
+1&
+#60
+0&
+#65
+b10 8
+b1100 $
+b1100 5
+0"
+b11001100 !
+b11001100 .
+1&
+#70
+0&
+#75
+bx !
+bx .
+1%
+b0 8
+b0 4
+b110101 3
+b1101 7
+b11001100 #
+b11001100 6
+b110100 $
+b110100 5
+1"
+1&
+#80
+0&
+#85
+0"
+0%
+b11001100 !
+b11001100 .
+1&
